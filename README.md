@@ -7,7 +7,7 @@ A repository for housing shared/common components used by JAQU CAZ UIs.
 Add this line to your application's Gemfile:
 
 ```ruby
-git 'git@github.com:/InformedSolutions/JAQU-CAZ-Ruby-Common' do
+git 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common' do
   gem 'custom_logger'
 end
 ```

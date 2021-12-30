@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
+require_relative 'lib/privacy_policy/version'
+
 Gem::Specification.new do |spec|
-  spec.platform = Gem::Platform::RUBY
-  spec.name = 'JAQU-CAZ-Ruby-Common'
-  spec.version = '1.0'
+  spec.name = 'privacy_policy'
+  spec.version = PrivacyPolicy::VERSION
   spec.authors = 'JAQU'
-  spec.summary = 'A repository for housing shared/common components used by JAQU CAZ UIs'
-  spec.homepage = 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common'
+  spec.summary = 'Shared privacy policy between pages'
+  spec.homepage = 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common/tree/develop/privacy_policy'
   spec.metadata['homepage_uri'] = spec.homepage
   spec.required_ruby_version = '>= 3.0.3'
 
@@ -20,9 +21,8 @@ Gem::Specification.new do |spec|
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.add_dependency 'haml'
+  spec.add_dependency 'rails', '~> 6.1'
 
   spec.add_development_dependency 'bundler', '~> 2.2.32'
-  # This is our gem dependency
-  spec.add_dependency 'custom_logger'
-  spec.add_dependency 'privacy_policy'
 end

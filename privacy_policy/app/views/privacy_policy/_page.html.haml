@@ -40,9 +40,9 @@
         of  the  relevant  local  authority  for further  information  on  how  they  process  your  personal  
         data  to  operate  their  scheme  and  enforce  their Clean Air Zone charge.
 
-      %p  
+      %ul.govuk-list
         - caz_link_display_data.each do |caz_link|
-          %p{style: 'margin-bottom: 0'}
+          %li
             = link_to("#{caz_link.name}", caz_link.privacy_policy_url, id: "#{caz_link.name.downcase}-policy-link")
       %h2.govuk-heading-l
         What personal data it being collected and how is it used?

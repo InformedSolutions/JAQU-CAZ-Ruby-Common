@@ -2,15 +2,11 @@ PATH
   remote: .
   specs:
     privacy_policy (0.1.0)
-      haml
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
-      tilt
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -24,8 +20,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.3)
-    temple (0.8.2)
-    tilt (2.0.10)
 
 PLATFORMS
   arm64-darwin-20
@@ -36,4 +30,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.2.33
+   2.2.32

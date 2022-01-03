@@ -1,0 +1,398 @@
+- title_and_header = title_and_header ? title_and_header : 'Privacy Notice'
+- caz_link_display_data = caz_link_display_data ? caz_link_display_data : []
+
+%main.govuk-main-wrapper#main-content{role: 'main'}
+  .govuk-grid-row
+    .govuk-grid-column-two-thirds
+      %h1.govuk-heading-xl= title_and_header
+      %p
+        A Clean Air Zone (CAZ) is an area where targeted action is taken to improve air quality.
+        The purpose of the CAZ central service is to enable you to find out if you need to pay to drive within a CAZ and, 
+        if so, pay a daily charge if your vehicle does not meet emission standards. 
+        Full details of the CAZ are available at: 
+
+        = succeed '.' do
+          = link_to('https://www.gov.uk/guidance/driving-in-a-clean-air-zone',
+                    'https://www.gov.uk/guidance/driving-in-a-clean-air-zone',
+                    id: 'drive-in-caz-link')
+
+      %p
+        This notice explains how the Joint Air Quality Unit (JAQU), 
+        processes and shares your personal data for the purposes of the CAZ scheme. 
+        JAQU is a joint unit of Department of Transport (DfT) and the Department for Environment, 
+        ood and Rural Affairs (Defra) established to oversee the UK plan for tackling roadside nitrogen dioxide (NO2) 
+        concentrations. This CAZ privacy notice supplements the general privacy notices available at
+
+        = link_to('Defra',
+                  'https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs/about/personal-information-charter',
+                  id: 'defra-link')
+        and
+        = succeed '.' do
+          = link_to('DfT',
+                    'https://www.gov.uk/government/organisations/department-for-transport/about/personal-information-charter',
+                    id: 'dtf-link')
+
+      %p  
+        JAQU is a joint controller of this data with the local authorities who operate a Clean Air Zone. 
+        This CAZ privacy  notice  deals  only  with  personal  data  in  respect  of  which  JAQU  is  Joint  Controller.  
+        High  level information on the roles and responsibilities of the various parties with regards to the 
+        processing of your personal  data  is  provided  below  but  please  refer  to  the  privacy  policy  
+        of  the  relevant  local  authority  for further  information  on  how  they  process  your  personal  
+        data  to  operate  their  scheme  and  enforce  their Clean Air Zone charge.
+
+      %p  
+        - caz_link_display_data.each do |caz_link|
+          %p{style: 'margin-bottom: 0'}
+            = link_to("#{caz_link.name}", caz_link.privacy_policy_url, id: "#{caz_link.name.downcase}-policy-link")
+      %h2.govuk-heading-l
+        What personal data it being collected and how is it used?
+
+      %p
+        To  enable  a  local  authority  to  operate  its  CAZ,  JAQU  is  delivering  the  CAZ  Central  Service,
+        a  digital service that allows the local authority to determine:
+
+      %ul.govuk-list.govuk-list--bullet
+        %li
+          whether a vehicle entering a CAZ is compliant with the CAZ Framework;
+        %li
+          if the vehicle is not compliant, whether it is liable to be charged and, if so, how much;
+        %li
+          to enable individuals to pay the charge if one is applicable;
+        %li
+          and, provide a first point of contact for the resolution of queries and to support assisted digital users.
+
+      %p
+        The  local  authorities  will  collect  vehicle  registration  numbers  (VRN)  entering 
+        a  CAZ  using  automatic number plate recognition (ANPR)
+        cameras and provide these to JAQU to determine if the vehicle is liable for a charge.
+
+      %p
+        Your number plate will also be collected if you use the vehicle checker 
+        ("Check if you'll be charged to drive in a Clean Air Zone") service accessible 
+        at: 
+
+        = succeed '.' do
+          = link_to('https://www.gov.uk/check-clean-air-zone-charge',
+                    'https://www.gov.uk/check-clean-air-zone-charge',
+                    id: 'check-caz-charge-link')
+
+      %p
+        Automated  rules  will  be  used  to  determine  whether  your  vehicle  is  subject  
+        to  the  charge  based  on  its emission standards. If you have concerns that the 
+        vehicle has been wrongly identified as being subject to the charge or any queries 
+        about the information provided by the Drive in a Clean Air Zone service you can 
+        submit an enquiry by using a 
+
+        = succeed '.' do
+          = link_to('web form',
+                    'https://urldefense.com/v3/__https:/eur03.safelinks.protection.outlook.com/?url=https*3A*2F*2Furldefense.com*2Fv3*2F__https*3A*2Fcontact.dvla.gov.uk*2Fcaz*2F__*3B!!HEBAkwG3r5RD!sITQFbgLoILhT-oV81xK09oSF_dJP-KlNi_bW3vguNj8LCXWu9BMgquPklzEzvs_t7KEkwPRTA*24&data=04*7C01*7CGreig.Andersson*40defra.gov.uk*7Cae48dd6e9c5d473c261a08d8e8728ec4*7C770a245002274c6290c74e38537f1102*7C1*7C0*7C637514926018873212*7CUnknown*7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0*3D*7C1000&sdata=STOTrwqbL43CeSWfNLzKrnLx6aHQfGfMYjiML7VcT9k*3D&reserved=0__;JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUl!!HEBAkwG3r5RD!oMj9JJcWhyoIj-ySY7IEGuCW15U3pUwuVCbMaYLq1Wqh3nUlCTXPg0OB7eFIOD9RWS1uTfq2kw$',
+                    id: 'web-form-link')
+
+      %p
+        Along with your query, you will need to give your name and email address, 
+        which will be used to respond to your query. The information you provide 
+        will be sent to JAQU (or suppliers acting on their behalf) for the sole 
+        purpose of replying to you.
+
+      %p
+        Your personal details may also be used to conduct research on the effectiveness 
+        of the service to ensure it is meeting customer needs and expectations and to 
+        continuously improve the service. All research is conducted by DVLA on behalf of JAQU.
+
+      %p
+        Alternatively, if you phone the Customer contact centre, to make any enquiries concerning 
+        the operation of the CAZ,  the following information may be requested to help resolve your 
+        query. JAQU may also need to share this information with the relevant local 
+        authority to assist with your query:
+
+      %ul.govuk-list.govuk-list--bullet
+        %li
+          Name/Surname
+        %li
+          Address
+        %li
+          Previous name and address, if appropriate
+        %li
+          Telephone number
+        %li
+          Email address
+        %li
+          VRN, make, model and colour of the vehicle
+
+      %p
+        The telephone call may also be recorded for training, appeals or enforcement purposes.
+
+      %p
+        If you phone the Customer Contact Centre requesting a payment confirmation email is re-sent, 
+        the email address you provide and the date and time the email was re-sent will be stored for 7 years.
+
+      %p
+        All information related to general enquiries is retained for a period of 90 days. After 90 days, 
+        only name and email address are kept, and the rest of the information is deleted. 
+        Name and email are retained for 7 years to enable us to check whether the users have 
+        previously submitted an enquiry.
+
+      %h2.govuk-heading-l
+        Before the CAZ is operational?
+      
+      %p
+        Historic VRN data may be used for testing purposes where necessary. 
+        This enables the system setup to be tested against expected performance 
+        in a controlled environment. This data is deleted once testing is completed.
+
+      %p
+        Clean Air Zone local authorities and JAQU jointly use personal data to ensure that people, 
+        who are likely to be affected by the introduction of Clean Air Zones, receive a letter 
+        giving them advance notice of the zones coming into force. If your vehicle travels through 
+        an area that will be designated as a Clean Air Zone, your  VRN  may  be  collected  by  
+        ANPR  and  passed  to  JAQU.  If  your  vehicle  does  not  meet  the  current emission 
+        standards, an ‘Early Notice Letter’ may be sent to you using information held by the Driver 
+        and Vehicle Licensing Agency (DVLA) informing you that your vehicle will be subject to a charge. 
+
+      %h2.govuk-heading-l
+        Once the CAZ is operational?
+
+      %p
+        Only vehicles that do not meet emission standards will have to pay a charge when the CAZ starts charging.
+
+      %p
+        Local  authorities  will  use  ANPR  to  capture  the  VRN  of  vehicles  entering  
+        a  CAZ.  After  filtering  the  data collected via ANPR to account for local 
+        exemptions, the remaining vehicle entrant data will be sent to the CAZ central 
+        service to determine if the vehicle should be charged.
+
+      %p
+        VRN and time of entry will also be used to check whether a payment has been made.
+
+      %p
+        If your vehicle is liable to be charged and travels in the CAZ once it is in operation, 
+        you will be able to pay using  a  credit,  debit  card  or  by  Direct  Debit. 
+        When  you  enter  your  bank  details  to  make  payment;  your payment data will 
+        be processed by the CAZ Central Service (using payment providers, who will process the 
+        payment transaction). The payment date is exchanged with the CAZ Central Service 
+        for reconciliation purposes.
+
+      %p
+        An email address will be requested from you to allow a payment confirmation receipt 
+        to be sent to you. The local authority will also be sent confirmation of the payment 
+        and the payment status of those vehicles entering their CAZ that are eligible for a charge.
+
+      %p
+        JAQU will retain a record of your payment transaction for a period of 7 years in the central service. 
+        The record will include the VRN against which the payment was made. 
+        Data relating to your payment may be accessed by the Support Team or by Contact Centre advisors 
+        in order to assist with any related queries. . Users will also be able to view their 
+        transaction payment history for up to 18 months from when a payment is completed.
+
+      %p
+        If you do not pay the charge you may get a penalty charge notice (PCN). 
+        Details of how to pay or appeal a PCN can be found on the Local Authority site.
+
+      %p
+        Businesses that are the registered keeper of two or more vehicles can check 
+        and pay charges for multiple UK registered vehicles entering a CAZ by opening an account.
+
+      %p
+        To use the service, you need to be a business and create an account stating your company name, 
+        email address  and   provide  a  password.  The  service  will  verify  the  email  
+        address  to  send  a  secure  link  to complete the account set up.
+
+      %p
+        You will then need to enter the VRN for your vehicle(s). 
+        The VRNs will be retained whilst your account remains  active.  
+        If  you  replace  your  vehicle(s),  your  vehicle  history  will  be  
+        retained  for  12  months,  after which it will be deleted.
+
+      %p
+        The account information will be retained by JAQU for as long as the account remains active. 
+        If you do not use our service for 180 days, your account will become inactive. In this scenario, 
+        we will retain your account information for 7 years after the account becomes inactive.
+
+      %h2.govuk-heading-l
+        NO2 evaluation data
+
+      %p
+        In order to understand the extent to which the programme is meeting its stated aim 
+        of reducing nitrogen dioxide concentrations to within legal limits in the shortest possible time, 
+        a clear understanding of fleet composition (with reference to Euro Standards) before, 
+        during and after the implementation of the Local Plan measures, is needed.
+
+      %p
+        Local authorities will therefore be sharing VRN details of vehicles entering the 
+        CAZ with JAQU before the CAZ goes live, and then quarterly for the duration of the evaluation period.  
+        DfT will match this data with vehicle type and emissions data which will be pseudonymised 
+        prior to being returned to the local authority and third parties acting on their and JAQU’s 
+        behalf to evaluate and provide reports on air quality.
+
+      %p
+        DfT will retain this pseudonymised data (where identifying details are replaced with a key) 
+        for no longer than 12 months.
+
+      %h2.govuk-heading-l
+        What is the lawful basis for processing my personal data?
+
+      %p
+        The legal basis for the processing of your personal data to operate a CAZ 
+        is that it is necessary for the performance of a task carried out in the public 
+        interest and in the exercise of official authority vested in: 
+
+      %ul.govuk-list.govuk-list--bullet
+        %li
+          DfT and Defra, as partners in JAQU; and
+        %li
+          Local Authorities as operators of the CAZ.
+
+      %p
+        The public interest task is to inform people of new regulations 
+        and penalties prior to their coming into effect, 
+        and to facilitate the operation of the CAZ.
+
+      %p
+        Where special category personal data is being processed to determine whether 
+        a vehicle is exempt from the charge because it falls within the disabled tax class, 
+        this is processed for reasons of substantial public interest under Article 9 
+        of the UK General Data Protection Regulation and for statutory and government 
+        purposes under Schedule 1 Data Protection Act 2018. 
+
+      %p
+        The legal powers underpinning the CAZ scheme are Part III and Schedule 12 of the 
+        Transport Act 2000 and Parts 2 and 6 of The Road User Charging Schemes 
+        (Penalty Charges, Adjudication and Enforcement) (England) 
+        Regulations 2013 pertaining to the Clean Air Zone Charging Order relevant 
+        to the local authority whose ANPR cameras recorded your number plate.
+
+      %p
+        The legal basis for processing your personal data to conduct research on the effectiveness 
+        of the service is consent. You do not have to provide your consent 
+        and you can withdraw your consent at any time.
+
+      %h2.govuk-heading-l
+        Who will my personal data be shared with?
+
+      %p
+        In order to operate the central CAZ service, your personal data may be lawfully shared with the following:
+
+      %ul.govuk-list.govuk-list--bullet
+        %li
+          Suppliers working with or on behalf of JAQU;
+        %li
+          Other government departments;
+        %li
+          Local Authorities.
+
+      %h2.govuk-heading-l
+        Will my personal data be transferred outside the UK?
+
+      %p
+        Data relating to UK registered vehicles will not be 
+        routinely transferred outside of the UK.
+
+      %p
+        Data held within the CAZ central service may be accessed by IT support teams 
+        in Australia and Singapore to help resolve an urgent technical issue. 
+        However, there are Standard Contract Clauses adopted by the Commission 
+        in place to ensure comparable protection for the data.
+
+      %h2.govuk-heading-l
+        Who can i contact with any concerns about the CAZ?
+
+      %p
+        You can raise any queries about the information provided by the vehicle checker 
+        service by using the web form available at:
+        = succeed '.' do
+          = link_to('https://contact.dvla.gov.uk/caz/',
+                    'https://contact.dvla.gov.uk/caz/',
+                    id: 'contact-dvla-link')
+
+      %p
+        If  you  have  any  questions  about  how  your  personal  data  is  processed  
+        in  relation  to  the  CAZ  Central Service,  or  are  interested  in  exercising  
+        any  of  your  rights  under  data  protection  law  in  
+        relation  to  that processing, please contact:
+
+      %p
+        Data Protection Manager for JAQU by email at: 
+
+        = mail_to 'data.protection@defra.gov.uk'
+      
+      %p
+        Contact details for the local authorities can be found in the links at the beginning of this notice.
+
+      %h2.govuk-heading-l
+        What is the arrangement between the joint controllers regarding other matters concerning my personal data?
+
+      %p
+        The roles and responsibilities of the Joint Controllers, (JAQU and the local authorities) that 
+        operate the scheme, with regards to the processing of your personal data are as follows:
+
+      %ul.govuk-list.govuk-list--bullet
+        %li
+          JAQU has prepared this privacy notice in consultation with the Local Authorities 
+          who are also responsible for publishing their own privacy notices to reflect the 
+          processing they undertake for CAZ;
+        %li
+          The parties will cooperate with each other in responding to any request  
+          received from data subjects exercising their rights under data protection 
+          legislation in relation to their personal data (a ‘Data Subject Request’). 
+          The party receiving the Data Subject Request will fulfil the obligations of the controller 
+          to respond to the request in accordance with data protection legislation;
+        %li
+          They will provide reasonable assistance to each other to enable a Data Subject 
+          Request to be dealt with in an expeditious and compliant manner;
+        %li
+          Each shall be responsible for fulfilling the controller’s responsibilities under data 
+          protection legislation as to security of the personal data processed on systems 
+          controlled by that party;
+        %li
+          If JAQU becomes aware of a data incident within the central CAZ service, 
+          Defra, as the ‘Reporting Party’, will be responsible for assessing whether 
+          the breach constitutes a personal data breach that is required to be notified 
+          to the Information Commissioner’s Office and (where applicable) to the data 
+          subjects under Articles 33 and 34 of the UK GDPR. The Reporting party shall 
+          fulfil the obligations of the controller to give such notice, if it is required, 
+          in accordance with data protection legislation;
+        %li
+          The parties have agreed to provide reasonable assistance to each other in order to 
+          facilitate the handling of any personal data breach in an expeditious and compliant manner;
+        %li
+          Where the Local Authority becomes aware of a data incident relating to its processing 
+          of personal data for CAZ, it will be responsible for assessing and reporting 
+          any personal data breaches arising;
+        %li
+          In the event of a complaint or dispute brought by a data subject 
+          or a data protection authority concerning the processing of personal 
+          data within the central CAZ service, Defra will act as the initial 
+          contact point but all parties will provide all reasonable assistance in 
+          helping to investigate and resolve the matter;
+        %li
+          All complaints or disputes relating to the use of ANPR or the enforcement 
+          of the CAZ charge should be directed to the relevant Local Authority.
+
+      %p
+        Irrespective of the above arrangement, you can exercise your rights under the UK GDPR 
+        in respect of and against each of the Joint Controllers if you wish.
+
+      %h2.govuk-heading-l
+        Where can I find futher information about my rights?
+
+      %p
+        More  information  on  your  rights  is  available  at: 
+
+        = link_to('https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/',
+                  'https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/',
+                  id: 'data-protection-link')
+      %p
+        You also have the right to lodge a complaint with the ICO and, 
+        should you wish to exercise that right, full details are available at: 
+
+        = link_to('https://ico.org.uk/make-a-complaint/your-personal-information-concerns/',
+                  'https://ico.org.uk/make-a-complaint/your-personal-information-concerns/',
+                  id: 'personal-information-link')
+
+      %h2.govuk-heading-l
+        Review
+
+      %p
+        We review our privacy policy at least annually. 
+        By doing this we will make sure you are always aware of what information we collect, 
+        how we use it and under what circumstances (if any) we will share it with other parties.

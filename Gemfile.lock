@@ -6,15 +6,11 @@ PATH
       privacy_policy
     custom_logger (0.1.0)
     privacy_policy (0.1.0)
-      haml
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    haml (5.2.2)
-      temple (>= 0.8.0)
-      tilt
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
@@ -33,8 +29,6 @@ GEM
     rubocop-ast (1.15.1)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
-    temple (0.8.2)
-    tilt (2.0.10)
     unicode-display_width (2.1.0)
 
 PLATFORMS
@@ -49,4 +43,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.2.33
+   2.2.32

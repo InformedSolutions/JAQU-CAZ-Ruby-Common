@@ -20,7 +20,10 @@
         This notice explains how the Joint Air Quality Unit (JAQU), 
         processes and shares your personal data for the purposes of the CAZ scheme. 
         JAQU is a joint unit of Department of Transport (DfT) and the Department for Environment, 
-        Food and Rural Affairs (Defra) established to oversee the UK plan for tackling roadside nitrogen dioxide (NO2) 
+        Food and Rural Affairs (Defra) established to oversee the UK plan for tackling roadside nitrogen dioxide 
+        = succeed ')' do
+          = precede '(NO' do
+            %sub 2
         concentrations. This CAZ privacy notice supplements the general privacy notices available at
 
         = link_to('Defra',
@@ -34,7 +37,9 @@
 
       %p  
         JAQU is a joint controller of this data with the local authorities who operate a Clean Air Zone. 
-        This CAZ privacy  notice  deals  only  with  personal  data  in  respect  of  which  JAQU  is  Joint  Controller.  
+        This CAZ privacy  notice  deals  only  with  personal  data  in  respect  of  which  JAQU  is
+        = succeed '.' do 
+          %b Joint Controller
         High  level information on the roles and responsibilities of the various parties with regards to the 
         processing of your personal  data  is  provided  below  but  please  refer  to  the  privacy  policy  
         of  the  relevant  local  authority  for further  information  on  how  they  process  your  personal  
@@ -48,7 +53,9 @@
         What personal data is being collected and how is it used?
 
       %p
-        To  enable  a  local  authority  to  operate  its  CAZ,  JAQU  is  delivering  the  CAZ  Central  Service,
+        To  enable  a  local  authority  to  operate  its  CAZ,  JAQU  is  delivering  the 
+        = succeed ',' do
+          %b CAZ Central Service
         a  digital service that allows the local authority to determine:
 
       %ul.govuk-list.govuk-list--bullet
@@ -133,7 +140,7 @@
         previously submitted an enquiry.
 
       %h2.govuk-heading-l
-        Before the CAZ is operational?
+        Before the CAZ is operational
       
       %p
         Historic VRN data may be used for testing purposes where necessary. 
@@ -150,7 +157,7 @@
         and Vehicle Licensing Agency (DVLA) informing you that your vehicle will be subject to a charge. 
 
       %h2.govuk-heading-l
-        Once the CAZ is operational?
+        Once the CAZ is operational
 
       %p
         Only vehicles that do not meet emission standards will have to pay a charge when the CAZ starts charging.

@@ -4,8 +4,10 @@ PATH
     JAQU-CAZ-Ruby-Common (1.0)
       custom_logger
       privacy_policy
+      vrn_formatter
     custom_logger (0.1.0)
     privacy_policy (0.1.0)
+    vrn_formatter (0.1.0)
 
 GEM
   remote: https://rubygems.org/

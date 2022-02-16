@@ -24,6 +24,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.2.32'
   # This is our gem dependency
   spec.add_dependency 'custom_logger'
+  spec.add_dependency 'encryption'
   spec.add_dependency 'privacy_policy'
   spec.add_dependency 'vrn_formatter'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

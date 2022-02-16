@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require_relative 'lib/privacy_policy/version'
+require_relative 'lib/encryption'
 
 Gem::Specification.new do |spec|
-  spec.name = 'privacy_policy'
-  spec.version = PrivacyPolicy::VERSION
+  spec.name = 'encryption'
+  spec.version = Encryption::VERSION
   spec.authors = 'JAQU'
-  spec.summary = 'Shared privacy policy between pages'
-  spec.homepage = 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common/tree/develop/privacy_policy'
+  spec.summary = 'A simple wrapper for the OpenSSL Cipher library'
+  spec.homepage = 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common/tree/develop/encryption'
   spec.metadata['homepage_uri'] = spec.homepage
   spec.required_ruby_version = '>= 3.0.3'
 

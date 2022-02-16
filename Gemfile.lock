@@ -3,9 +3,11 @@ PATH
   specs:
     JAQU-CAZ-Ruby-Common (1.0)
       custom_logger
+      encryption
       privacy_policy
       vrn_formatter
     custom_logger (0.1.0)
+    encryption (0.1.0)
     privacy_policy (0.1.0)
     vrn_formatter (0.1.0)
 
@@ -30,16 +32,20 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.15.1)
       parser (>= 3.0.1.1)
+    rubocop-rspec (2.8.0)
+      rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     unicode-display_width (2.1.0)
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   JAQU-CAZ-Ruby-Common!
   bundler (~> 2.2.32)
   rubocop
+  rubocop-rspec
 
 RUBY VERSION
    ruby 3.0.3p157

@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 2.2.32'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

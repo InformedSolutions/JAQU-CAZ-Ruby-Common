@@ -16,18 +16,19 @@ GEM
     rspec-expectations (3.11.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
-    rspec-mocks (3.11.0)
+    rspec-mocks (3.11.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.2.32)
+  bundler (~> 2.3.11)
   rspec
   vrn_formatter!
 
 BUNDLED WITH
-   2.2.32
+   2.3.11

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'A repository for housing shared/common components used by JAQU CAZ UIs'
   spec.homepage = 'https://github.com/InformedSolutions/JAQU-CAZ-Ruby-Common'
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.required_ruby_version = '>= 3.0.3'
+  spec.required_ruby_version = '>= 3.1.2'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 2.2.32'
+  spec.add_development_dependency 'bundler', '~> 2.3.11'
   # This is our gem dependency
   spec.add_dependency 'custom_logger'
   spec.add_dependency 'encryption'

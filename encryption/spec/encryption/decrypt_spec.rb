@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
 require 'json'
 
 RSpec.describe Encryption::Decrypt do
-  subject(:decrypt) { described_class.call(data: data) }
+  subject(:decrypt) { described_class.call(data:) }
 
   let(:data) { 'jAzWrxbseQbF5GbQkAy6klI6SYSuejSk3GUIcUjn1wxQkWXAhsSi98Tr2hPNZmHFPnnJbbGjeeKmVZtUKSW0oQ==' }
   let(:email) { 'user@example.com' }

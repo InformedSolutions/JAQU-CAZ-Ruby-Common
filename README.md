@@ -14,4 +14,12 @@ end
 
 And then execute:
 
-    $ bundle install
+```
+bundle install
+```
+    
+## Run all tests and checks
+
+```
+rake build
+```

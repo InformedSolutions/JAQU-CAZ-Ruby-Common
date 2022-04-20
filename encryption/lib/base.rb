@@ -23,7 +23,7 @@ module Encryption
     ##
     # Default initializer. May be overridden in each service
     #
-    def initialize(_options = {}); end\
+    def initialize(_options = {}); end # rubocop:disable Style/RedundantInitialize
 
     private
 

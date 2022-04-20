@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
 require 'json'
 
 RSpec.describe Encryption::Encrypt do
   subject(:encrypt) { described_class.call(data: data.to_json) }
 
-  let(:data) { { email: email, 'pw-reset-requested': pw_reset_requested } }
+  let(:data) { { email:, 'pw-reset-requested': pw_reset_requested } }
   let(:email) { 'user@example.com' }
   let(:pw_reset_requested) { 1_645_012_151 }
 

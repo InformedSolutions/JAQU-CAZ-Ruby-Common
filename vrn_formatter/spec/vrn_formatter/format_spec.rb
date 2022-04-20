@@ -2,13 +2,13 @@
 
 # rubocop:disable Metrics/BlockLength
 RSpec.describe VrnFormatter::Format do
-  subject { described_class.new(vrn: vrn).call }
+  subject(:service) { described_class.new(vrn:).call }
 
   context 'when vrn format is "C9"' do
     let(:vrn) { 'C9' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('C 9')
+      expect(service).to eq('C 9')
     end
   end
 
@@ -16,7 +16,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9C' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9 C')
+      expect(service).to eq('9 C')
     end
   end
 
@@ -24,7 +24,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AA9' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AA 9')
+      expect(service).to eq('AA 9')
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A99' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A 99')
+      expect(service).to eq('A 99')
     end
   end
 
@@ -40,7 +40,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9AA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9 AA')
+      expect(service).to eq('9 AA')
     end
   end
 
@@ -48,7 +48,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '99A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('99 A')
+      expect(service).to eq('99 A')
     end
   end
 
@@ -56,7 +56,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA9' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 9')
+      expect(service).to eq('AAA 9')
     end
   end
 
@@ -64,7 +64,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A 999')
+      expect(service).to eq('A 999')
     end
   end
 
@@ -72,7 +72,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AA99' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AA 99')
+      expect(service).to eq('AA 99')
     end
   end
 
@@ -80,7 +80,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9 AAA')
+      expect(service).to eq('9 AAA')
     end
   end
 
@@ -88,7 +88,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '99AA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('99 AA')
+      expect(service).to eq('99 AA')
     end
   end
 
@@ -96,7 +96,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '999A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('999 A')
+      expect(service).to eq('999 A')
     end
   end
 
@@ -104,7 +104,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A9AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A9 AAA')
+      expect(service).to eq('A9 AAA')
     end
   end
 
@@ -112,7 +112,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA9A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 9A')
+      expect(service).to eq('AAA 9A')
     end
   end
 
@@ -120,7 +120,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA99' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 99')
+      expect(service).to eq('AAA 99')
     end
   end
 
@@ -128,7 +128,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AA999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AA 999')
+      expect(service).to eq('AA 999')
     end
   end
 
@@ -136,7 +136,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '99AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('99 AAA')
+      expect(service).to eq('99 AAA')
     end
   end
 
@@ -144,7 +144,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '999AA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('999 AA')
+      expect(service).to eq('999 AA')
     end
   end
 
@@ -152,7 +152,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9999A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9999 A')
+      expect(service).to eq('9999 A')
     end
   end
 
@@ -160,7 +160,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A9999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A 9999')
+      expect(service).to eq('A 9999')
     end
   end
 
@@ -168,7 +168,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A99AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A99 AAA')
+      expect(service).to eq('A99 AAA')
     end
   end
 
@@ -176,7 +176,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA99A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 99A')
+      expect(service).to eq('AAA 99A')
     end
   end
 
@@ -184,7 +184,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 999')
+      expect(service).to eq('AAA 999')
     end
   end
 
@@ -192,7 +192,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '999AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('999 AAA')
+      expect(service).to eq('999 AAA')
     end
   end
 
@@ -200,7 +200,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AA9999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AA 9999')
+      expect(service).to eq('AA 9999')
     end
   end
 
@@ -208,7 +208,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9999AA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9999 AA')
+      expect(service).to eq('9999 AA')
     end
   end
 
@@ -216,7 +216,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'A999AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('A999 AAA')
+      expect(service).to eq('A999 AAA')
     end
   end
 
@@ -224,7 +224,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA999A' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 999A')
+      expect(service).to eq('AAA 999A')
     end
   end
 
@@ -232,7 +232,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AAA9999' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AAA 9999')
+      expect(service).to eq('AAA 9999')
     end
   end
 
@@ -240,7 +240,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { 'AA99AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('AA99 AAA')
+      expect(service).to eq('AA99 AAA')
     end
   end
 
@@ -248,7 +248,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '9999AAA' }
 
     it 'adds whitespace in expected place' do
-      expect(subject).to eq('9999 AAA')
+      expect(service).to eq('9999 AAA')
     end
   end
 
@@ -256,7 +256,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { '!909DF384' }
 
     it 'returns it' do
-      expect(subject).to eq('!909DF384')
+      expect(service).to eq('!909DF384')
     end
   end
 
@@ -264,7 +264,7 @@ RSpec.describe VrnFormatter::Format do
     let(:vrn) { nil }
 
     it 'returns it' do
-      expect(subject).to eq(nil)
+      expect(service).to be_nil
     end
   end
 end

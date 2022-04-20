@@ -22,5 +22,5 @@
 - [ ] I have added tests to cover my changes.
 
 <!--- Branch naming conventions: --->
-<!--- - feature/CAZB-123/... for new features cards (branched of develop) --->
-<!--- - bug/CAZB-123/... for bugs (branched of develop) --->
+<!--- - feature/VCC-123/... for new features cards (branched of develop) --->
+<!--- - bug/VCC-123/... for bugs (branched of develop) --->

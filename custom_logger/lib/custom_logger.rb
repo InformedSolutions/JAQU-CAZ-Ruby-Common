@@ -25,4 +25,21 @@ module CustomLogger
       msg.gsub(IP_REGEX, FILTERED_STRING)
     end
   end
+
+  class Logger
+    # Override private method used in Logger to show 'INFO 1' in logs instead of `ANY`.
+    def format_severity(severity)
+      SEV_LABEL[severity] || 'INFO 1'
+    end
+
+    ##
+    # Logging severity.
+    module Severity
+      # Add a new custom logger method to log important information in production mode when `config.log_level` is :error.
+      # Example of usage: `Rails.logger.important_info('Some important information in production logs')`
+      def important_info(progname = nil, &)
+        add(6, nil, progname, &)
+      end
+    end
+  end
 end
